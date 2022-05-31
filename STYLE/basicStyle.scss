@@ -1,0 +1,225 @@
+@import url("https://use.typekit.net/rmc7vum.css");
+@import url("https://use.typekit.net/pbb1sak.css");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: museo, 'sarif';
+    width: 100%;
+}
+
+header {
+    height: 12vh;
+    background-color: #293e31;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5 !important;
+    .menu{
+        display: none;
+    }
+    .logo{
+        padding: 10px;
+        background-color: #fe8340;
+        #main{
+            color: #293e31;
+            font-size: 32px;
+            font-weight: 500;
+        }
+        #com{
+            color: #293e31;
+            display: none;
+        }
+        #tag{
+            color: #293e31;
+            
+        }
+    }
+    nav{
+        padding: 10px 4%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li{
+            list-style: none;
+            font-family: raleway, 'sans-serif';
+            font-weight: 500;
+            padding-left: 20px;
+            a{
+                text-decoration: none;
+                color: #fff;
+                transition: color 0.3s ease-in-out;
+                
+            }
+            a:hover {
+                color: #fe8340;
+            }
+        
+        }
+        
+    
+        li.active a{
+            color: #fe8340;
+        }
+        }
+
+        
+    }
+}
+
+.mobile-nav-bg{
+
+    background: #293e31;
+    height: 0px;
+    //animation: navTransform 2s linear;
+    //clip-path: circle(50%);
+    .mobile-nav{
+        
+        ul{
+            li{
+                display: none;
+                list-style: none;
+                font-family: 'raleway', sans-serif;
+                font-weight: 500;
+                padding: 6px;
+                
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    transition: color 0.3s ease-in-out;
+
+                }
+                
+            }
+            li.active1 a{
+                color: #fe8340;
+            }
+        }
+
+    }
+}
+
+.footer{
+    background: #293e31;
+    .footer-content{
+        width: 90%;
+        margin: auto;
+        padding: 5% 0 5% 0;
+        .social-grid{
+            font-weight: 900;
+            font-size: 1.6rem;
+            text-align: center;
+            display: grid;
+            grid-column-gap: 10px;
+            grid-template-columns: 3fr 1fr 3fr 1fr 3fr;
+            .facebook{
+                
+                a{
+                    text-decoration: none;
+                    color: #fe8340;
+                }
+
+            }
+            .line{
+                
+                width: 2px;
+                height: 100%;
+                background: #fe8340;
+            }
+            .instagram{
+                
+                a{
+                    text-decoration: none;
+                    color: #fe8340;
+                }
+            }
+            
+            .twitter{
+                a{
+                    text-decoration: none;
+                    color: #fe8340;
+                }
+            }
+        }
+
+        .copyright{
+            color: #fe8340;
+            text-align: center;
+            margin-top: 50px;
+            font-weight: lighter;
+        }
+    }
+}
+
+
+
+@media (max-width: 768px){
+    header{
+        background: #fe8340;
+        justify-content: space-around;
+        .menu{
+            display: block;
+            padding: 10px;
+            font-size: 2.0rem;
+            color: #293e31;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #com{
+            display: block !important;
+            
+        }
+        .logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            
+            //padding: 10px;
+            #main{
+                font-weight: 700;
+                font-size: 2.4rem;
+            }
+            #tag{
+               display: none;
+            }
+        }
+        nav{
+            display: none;
+        }
+    }
+
+    .mobile-nav-bg{
+        display: block;
+    }
+
+    .footer{
+        .footer-content{
+            .social-grid{
+                grid-template-rows: 1fr;
+                grid-template-columns: repeat(3, auto);
+                h1{
+                    font-size: 1.4rem;
+                    font-weight: 900;
+                }
+                .line{
+                    display: none;
+                }
+            }
+            .copyright{
+                margin-top: 20px;
+            }
+        }
+    }
+    
+}
